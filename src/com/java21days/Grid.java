@@ -7,8 +7,12 @@ public class Grid extends JFrame {
     Dimension dim = new Dimension(500, 500);
 
     Grid(String title, String[] buttons){
+        super(title);
+        setSize(dim);
+        setLocationRelativeTo(null);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
 
-
+        setVisible(true);
     }
 
     JButton[] createButtons(String[] buttons){
