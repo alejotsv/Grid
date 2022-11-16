@@ -8,5 +8,23 @@ public class Grid extends JFrame {
 
     Grid(String title, String[] buttons){
 
+
+    }
+
+    JButton[] createButtons(String[] buttons){
+        JButton[] jButtons = new JButton[buttons.length];
+        int i = 0;
+        for( String text : buttons ){
+            JButton btn = new JButton(text);
+            jButtons[i] = btn;
+            i++;
+        }
+        return jButtons;
+    }
+
+    void addButtons(JPanel panel, JButton[] jButtons){
+        for( JButton jButton : jButtons ){
+            panel.add(jButton);
+        }
     }
 }
