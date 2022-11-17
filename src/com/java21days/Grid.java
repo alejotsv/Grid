@@ -11,8 +11,14 @@ public class Grid extends JFrame {
         setSize(dim);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-
+        JPanel panel = new JPanel();
+        GridLayout gridLayout = new GridLayout(rows, columns);
+        panel.setLayout(gridLayout);
+        JButton[] jButtons = createButtons(buttons);
+        addButtons(panel, jButtons);
+        add(panel);
         setVisible(true);
+        pack();
     }
 
     JButton[] createButtons(String[] buttons){
